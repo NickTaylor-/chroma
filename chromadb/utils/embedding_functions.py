@@ -21,7 +21,7 @@ class SentenceTransformerEmbeddingFunction(EmbeddingFunction):
 
     # If you have a beefier machine, try "gtr-t5-large".
     # for a full list of options: https://huggingface.co/sentence-transformers, https://www.sbert.net/docs/pretrained_models.html
-    def __init__(self, model_name: str = "all-MiniLM-L6-v2", device: str = "cpu"):
+    def __init__(self, model_name: str = "all-MiniLM-L6-v2", device: str = None):
         if model_name not in self.models:
             try:
                 from sentence_transformers import SentenceTransformer
